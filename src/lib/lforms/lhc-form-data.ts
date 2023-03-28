@@ -63,7 +63,7 @@ export default class LhcFormData {
     // whether to allow more than one unused repeating item/section
     allowMultipleEmptyRepeatingItems: false,
     // whether to allow HTML content in the codingInstructions field.
-    allowHTMLInInstructions: false,
+    allowHTMLInInstructions: true, //**********FL */,
     displayControl: {
       // controls the question layout of the form. default value for questionLayout is "vertical".
       // available value could be "horizontal" when all the items in the form are on the same level,
