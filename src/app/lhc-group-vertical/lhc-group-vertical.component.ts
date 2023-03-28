@@ -10,7 +10,7 @@ import { WindowService} from '../../lib/window.service';
 export class LhcGroupVerticalComponent {
 
   @Input() item: any;
-
+  isCollapsed = true;
   viewMode = "";
 
   constructor(

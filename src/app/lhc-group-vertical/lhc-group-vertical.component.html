@@ -1,5 +1,5 @@
 <ng-container *ngIf="item">
-  <div class="lhc-item-group-title lhc-de-label-button">
+  <div class="lhc-item-group-title lhc-de-label-button" (click)="isCollapsed = !isCollapsed">
     <div class="lhc-de-label">
       <lhc-item-question-text [item]="item"></lhc-item-question-text>
     </div>
@@ -11,7 +11,7 @@
   </div>
 
   <!-- sub items -->
-  <div *ngIf="item.items" class="lhc-item-group-body">
+  <div *ngIf="item.items && !isCollapsed" class="lhc-item-group-body">
     <ng-container *ngFor="let item of item.items; trackBy: lhcDataService.trackByElementId">
       <lhc-item *ngIf="item && lhcDataService.targetShown(item) && !item._isHiddenFromView"
         [item]="item" class="{{lhcDataService.getItemClassList(item, viewMode)}}"
@@ -26,4 +26,3 @@
   </div>
 
 </ng-container>
-
